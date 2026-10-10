@@ -61,14 +61,18 @@ if (typeof argv.output !== "string" && !argv.stdout) {
   panic("Error: No output specified!");
 }
 
-generator(config).then((pdf) => {
-  if (typeof argv.output === "string" && argv.output.length > 0) {
-    writeFile(argv.output, pdf, "binary", (err) => {
-      if (err) panic(err);
-    });
-  } else if (argv.stdout) {
-    process.stdout.write(pdf);
-  } else {
-    panic("Error: No output specified!");
-  }
-});
+generator(config)
+  .then((pdf) => {
+    if (typeof argv.output === "string" && argv.output.length > 0) {
+      writeFile(argv.output, pdf, "binary", (err) => {
+        if (err) panic(err);
+      });
+    } else if (argv.stdout) {
+      process.stdout.write(pdf);
+    } else {
+      panic("Error: No output specified!");
+    }
+  })
+  .catch((err) => {
+    panic(err?.message || String(err));
+  });
