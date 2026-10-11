@@ -1,6 +1,6 @@
 {
   "name": "@zonywhoop/html2pdf",
-  "version": "1.7.0",
+  "version": "1.7.2",
   "description": "HTML to PDF converter",
   "scripts": {
     "clean": "rimraf ./dist",
