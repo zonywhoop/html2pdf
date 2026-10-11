@@ -92,8 +92,10 @@ jobs:
             APP_VERSION="${TAG_NAME#v}"
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
-            git checkout master
-            git pull origin master --rebase
+            git reset --hard HEAD
+            git clean -fd
+            git checkout master || git checkout -b master origin/master
+            git pull origin master
             npm version "${APP_VERSION}" --no-git-tag-version --allow-same-version
             if ! git diff --quiet package.json package-lock.json; then
               git add package.json package-lock.json
