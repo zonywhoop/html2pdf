@@ -1,6 +1,6 @@
 {
-  "name": "@iamdual/html2pdf",
-  "version": "1.5.1",
+  "name": "@zonywhoop/html2pdf",
+  "version": "1.7.0",
   "description": "HTML to PDF converter",
   "scripts": {
     "clean": "rimraf ./dist",
@@ -13,13 +13,13 @@
     "html2pdf": "./dist/bin/html2pdf.js"
   },
   "author": "Ekin Karadeniz <iamdual@icloud.com>",
-  "homepage": "https://github.com/iamdual/html2pdf",
+  "homepage": "https://github.com/zonywhoop/html2pdf",
   "repository": {
     "type": "git",
-    "url": "https://github.com/iamdual/html2pdf"
+    "url": "https://github.com/zonywhoop/html2pdf"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/iamdual"
+    "registry": "https://npm.pkg.github.com/zonywhoop"
   },
   "engines": {
     "node": ">=18"

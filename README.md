@@ -12,16 +12,10 @@ The best reason to use this method is that we can use it on any programming lang
 docker run -td -p 3000:3000 ghcr.io/zonywhoop/html2pdf:latest
 ```
 
-Or from Docker Hub:
-
-```bash
-docker run -td -p 3000:3000 iamdual/html2pdf
-```
-
 ### Start server with source
 
 ```bash
-git clone https://github.com/iamdual/html2pdf && cd html2pdf
+git clone https://github.com/zonywhoop/html2pdf && cd html2pdf
 npm install
 npm run build
 npm run start
@@ -50,7 +44,7 @@ curl 'http://localhost:3000/generate?source=https://google.com&timeout=10' > goo
 It also support for command-line interface, so you can convert easily to a PDF.
 
 ```bash
-git clone https://github.com/iamdual/html2pdf && cd html2pdf
+git clone https://github.com/zonywhoop/html2pdf && cd html2pdf
 npm install
 npm run build
 sudo npm link

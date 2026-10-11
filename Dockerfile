@@ -23,7 +23,7 @@ COPY src/ ./src/
 COPY bin/ ./bin/
 COPY test/ ./test/
 
-RUN npm run build
+RUN npm run build && chmod +x ./dist/bin/html2pdf.js && npm link
 
 ENTRYPOINT ["/usr/bin/tini", "--"]
 CMD ["npm", "run", "start"]

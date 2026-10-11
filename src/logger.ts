@@ -1,5 +1,5 @@
 /**
- * @iamdual/html2pdf
+ * @zonywhoop/html2pdf
  * Structured logger utility with timestamps and log levels
  */
 

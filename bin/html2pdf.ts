@@ -1,13 +1,16 @@
 #!/usr/bin/env node
 /**
- * @iamdual/html2pdf
+ * @zonywhoop/html2pdf
  * @author Ekin Karadeniz <iamdual@icloud.com>
- * @source https://github.com/iamdual/html2pdf
+ * @source https://github.com/zonywhoop/html2pdf
  */
+
+const pkg = require("../../package.json");
 
 let configArgs: [];
 
 const yargs = require("yargs/yargs")(process.argv.slice(2))
+  .version(pkg.version)
   .command(
     `$0 [options...] <source>`,
     "",

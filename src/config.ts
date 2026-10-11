@@ -1,7 +1,7 @@
 /**
- * @iamdual/html2pdf
+ * @zonywhoop/html2pdf
  * @author Ekin Karadeniz <iamdual@icloud.com>
- * @source https://github.com/iamdual/html2pdf
+ * @source https://github.com/zonywhoop/html2pdf
  */
 
 import { PaperFormat, PDFMargin } from "puppeteer";

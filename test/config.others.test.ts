@@ -4,7 +4,7 @@ import Config from "../src/config";
 describe("Others", function () {
   describe("source and isUrl", function () {
     it("Should be a URL", function () {
-      const config = new Config({ source: "https://github.com/iamdual" });
+      const config = new Config({ source: "https://github.com/zonywhoop" });
       assert.equal(config.isUrl, true);
     });
     it("Should NOT be a URL", function () {
