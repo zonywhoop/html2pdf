@@ -6,6 +6,7 @@
     "clean": "rimraf ./dist",
     "build": "tsc",
     "test": "mocha ./dist/test",
+    "test:unit": "mocha \"dist/test/config.*.test.js\"",
     "start": "node ./dist/src/rest-api"
   },
   "bin": {

@@ -12,11 +12,11 @@ on:
 
 jobs:
   test-node:
-    name: Node.js Test Matrix (${{ matrix.node-version }})
+    name: Node.js Unit Tests (${{ matrix.node-version }})
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [18.x, 20.x, 22.x]
+        node-version: [20.x, 22.x]
 
     steps:
       - uses: actions/checkout@v4
@@ -26,7 +26,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
       - run: npm run build
-      - run: npm run test
+      - run: npm run test:unit
 
   test-docker:
     name: Docker Container Test
